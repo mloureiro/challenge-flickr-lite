@@ -1,0 +1,57 @@
+{
+	"env": {
+		"browser": true,
+		"es2020": true,
+		"jest": true
+	},
+	"parser": "babel-eslint",
+	"extends": [
+		"airbnb-base",
+		"plugin:import/errors",
+		"plugin:import/warnings",
+		"plugin:prettier/recommended"
+	],
+	"parserOptions": {
+		"ecmaVersion": 11,
+		"sourceType": "module"
+	},
+	"ignorePatterns": ["**/dist/**", "**/vendor/*.js"],
+	"rules": {
+		"indent": ["error", "tab"],
+		"max-len": [
+			"error",
+			80,
+			2,
+			{
+				"ignoreUrls": true,
+				"ignoreComments": false,
+				"ignoreRegExpLiterals": true,
+				"ignoreStrings": true,
+				"ignoreTemplateLiterals": true
+			}
+		],
+		"import/order": [
+			"error",
+			{
+				"newlines-between": "always",
+				"alphabetize": {
+					"order": "asc",
+					"caseInsensitive": true
+				}
+			}
+		],
+		"import/prefer-default-export": ["off"],
+		"prettier/prettier": ["error"]
+	},
+	"overrides": [
+		{
+			"files": ["webpack.*.js"],
+			"rules": {
+				"@typescript-eslint/camelcase": 0,
+				"@typescript-eslint/explicit-function-return-type": 0,
+				"@typescript-eslint/no-var-requires": 0,
+				"import/no-extraneous-dependencies": 0
+			}
+		}
+	]
+}
