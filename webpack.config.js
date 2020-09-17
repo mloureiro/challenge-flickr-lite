@@ -1,7 +1,7 @@
-const path = require('path');
-const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
 
 const HOST = 'localhost';
 const PORT = 3000;
@@ -64,6 +64,38 @@ module.exports = () => ({
 				use: {
 					loader: 'babel-loader',
 				},
+			},
+			{
+				test: /\.css$/,
+				use: [
+					{
+						loader: 'style-loader',
+						options: {
+							esModule: true,
+						},
+					},
+					{
+						loader: 'css-loader',
+						options: {
+							modules: {
+								localIdentName: '[local]',
+							},
+							sourceMap: true,
+						},
+					},
+				],
+			},
+			{
+				test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: '[name].[ext]',
+							outputPath: 'assets/',
+						},
+					},
+				],
 			},
 		],
 	},
