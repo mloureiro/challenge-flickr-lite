@@ -6,9 +6,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HOST = 'localhost';
 const PORT = 3000;
 
-const PATH_DIST = path.join(__dirname, 'dist')
+const PATH_DIST = path.join(__dirname, 'dist');
 const PATH_ENTRY = path.join(__dirname, 'src', 'index.js');
 const PATH_HTML = path.join(__dirname, 'src', 'index.html');
+const PATH_SRC = path.join(__dirname, 'src');
+const PATH_LIB = path.join(__dirname, 'lib');
 
 module.exports = () => ({
 	mode: 'development',
@@ -45,6 +47,14 @@ module.exports = () => ({
 		}),
 		new webpack.HotModuleReplacementPlugin(),
 	],
+
+	resolve: {
+		extensions: ['.js', '.css'],
+		alias: {
+			'~': PATH_SRC,
+			lib: PATH_LIB,
+		},
+	},
 
 	module: {
 		rules: [
