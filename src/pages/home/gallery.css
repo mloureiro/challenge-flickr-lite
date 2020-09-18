@@ -1,0 +1,14 @@
+.home--gallery-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.home--gallery-load-more {
+	display: flex;
+	justify-content: center;
+	margin-top: var(--size-l);
+}
+
+.home--gallery-load-more.hidden {
+	display: none;
+}
