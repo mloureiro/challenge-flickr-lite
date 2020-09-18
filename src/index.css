@@ -46,6 +46,9 @@
 	--border-radius-s: var(--size-xxxs);
 	--border-radius-m: var(--size-xxs);
 	--border-radius-l: var(--size-xs);
+
+	--shadow-soft: 1px 1px 1px 0 rgba(0,0,0,0.2);
+	--border-soft: 1px solid var(--raw-color-silver);
 }
 
 body {

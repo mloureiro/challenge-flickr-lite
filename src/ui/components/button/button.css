@@ -1,0 +1,29 @@
+.button {
+	--button-padding-vertical: var(--size-xxxs);
+	--button-padding-horizontal: var(--size-xxl);
+
+	position: relative;
+	margin: 0;
+	padding:
+		var(--button-padding-vertical)
+		var(--button-padding-horizontal);
+	border: none;
+	border-radius: var(--size-s);
+	background-color: var(--color-action);
+	font-size: 1rem;
+	line-height: 1.4rem;
+	box-shadow: var(--shadow-soft);
+}
+
+.button:hover {
+	filter: brightness(110%);
+}
+
+.button:active {
+	filter: brightness(90%);
+}
+
+.button[disabled] {
+	filter: brightness(70%);
+	box-shadow: none;
+}
