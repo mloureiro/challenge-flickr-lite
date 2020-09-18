@@ -1,0 +1,30 @@
+.notification-banner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+}
+
+.notification-banner--notification {
+	display: flex;
+	border: var(--border-soft);
+	border-radius: var(--border-radius-m);
+	padding: var(--size-s) var(--size-m);
+	margin: 5px 10px;
+}
+
+.notification-banner--notification.error { background-color: var(--color-error); }
+.notification-banner--notification.warn { background-color: var(--color-warn); }
+.notification-banner--notification.info { background-color: var(--color-info); }
+
+.notification-banner--notification--message {
+	flex: 1;
+}
+
+.notification-banner--notification--close {
+	align-self: center;
+	padding: var(--size-xs) var(--size-m);
+	margin: calc(var(--size-s) * -1);
+	height: 100%;
+}
