@@ -1,0 +1,14 @@
+.loader-button.loading .loader-button--content {
+	visibility: hidden;
+}
+
+.loaderButton--spinner {
+	position: absolute;
+	top: var(--button-padding-vertical);
+	left: 0;
+	display: none;
+}
+
+.loader-button.loading .loaderButton--spinner {
+	display: block;
+}
