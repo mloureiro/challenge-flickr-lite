@@ -8,7 +8,8 @@
 	"private": true,
 	"scripts": {
 		"start": "webpack-dev-server",
-		"build": "webpack",
+		"build:dev": "webpack --progress",
+		"build:prod": "webpack --progress --env.production",
 		"lint": "eslint --fix \"./**/*.js\"",
 		"format": "prettier --write \"./**/*.{js,json,html}\""
 	},

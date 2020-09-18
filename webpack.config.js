@@ -12,8 +12,8 @@ const PATH_HTML = path.join(__dirname, 'src', 'index.html');
 const PATH_SRC = path.join(__dirname, 'src');
 const PATH_LIB = path.join(__dirname, 'lib');
 
-module.exports = () => ({
-	mode: 'development',
+module.exports = (env = {}) => ({
+	mode: env.production ? 'production' : 'development',
 	devtool: 'cheap-module-source-map',
 
 	entry: {
