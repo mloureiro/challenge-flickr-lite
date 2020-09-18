@@ -1,0 +1,61 @@
+:root {
+	/* color pallet from: http://clrs.cc/ */
+	--raw-color-navy: #001f3f;
+	--raw-color-blue: #0074d9;
+	--raw-color-aqua: #b2e9ff;
+	--raw-color-teal: #39cccc;
+	--raw-color-olive: #3d9970;
+	--raw-color-green: #2ecc40;
+	--raw-color-lime: #01ff70;
+	--raw-color-yellow: #ffdc00;
+	--raw-color-orange: #ff851b;
+	--raw-color-red: #ff4136;
+	--raw-color-maroon: #85144b;
+	--raw-color-fuchsia: #f012be;
+	--raw-color-purple: #b10dc9;
+	--raw-color-silver: #dddddd;
+	--raw-color-gray: #aaaaaa;
+	--raw-color-black: #111111;
+	--raw-color-white: #ffffff;
+
+	font-size: 16px;
+	--size-xxxs: 0.25rem;
+	--size-xxs: 0.5rem;
+	--size-xs: 0.75rem;
+	--size-s: 0.875rem;
+	--size-m: 1rem;
+	--size-l: 1.125rem;
+	--size-xl: 1.25rem;
+	--size-xxl: 1.5rem;
+	--size-xxxl: 1.8rem;
+
+	--color-error: var(--raw-color-red);
+	--color-warn: var(--raw-color-orange);
+	--color-info: var(--raw-color-teal);
+	--color-action: var(--raw-color-silver);
+
+	--color-text-default: #404040;
+	--color-text-inverted: #c0c0c0;
+
+	--font-family-default: Oxygen, Roboto, Helvetica Neue, sans-serif;
+	--font-family-cursive: Brush Script MT, Brush Script Std, cursive;
+
+	--font-weight-medium: 400;
+	--font-weight-heavy: 700;
+
+	--border-radius-s: var(--size-xxxs);
+	--border-radius-m: var(--size-xxs);
+	--border-radius-l: var(--size-xs);
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	color: var(--color-text-default);
+	font-family: var(--font-family-default);
+}
+
+.hidden {
+	display: none;
+}
