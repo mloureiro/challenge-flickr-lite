@@ -1,3 +1,4 @@
 import './index.css';
+import { homePage } from '~/pages/home';
 
-document.getElementById('app').innerText = 'It is working, I guess...';
+document.getElementById('app').append(homePage().element);
