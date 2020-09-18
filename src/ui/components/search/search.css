@@ -1,0 +1,22 @@
+.search-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.search-input {
+	flex: 1;
+	min-width: 0;
+	margin-right: var(--size-xxs);
+	padding: var(--size-xxxs) var(--size-xxs);
+	font-size: var(--size-m);
+	border: none;
+	border-radius: var(--size-xxxs);
+	box-shadow: var(--shadow-soft);
+	width: 100%;
+}
+
+@media (min-width: 30rem) {
+	.search-input {
+		max-width: 20rem;
+	}
+}
